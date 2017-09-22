@@ -13,10 +13,17 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 
+gem 'haml', '~> 4.0.7'
+gem 'erb2haml'
+gem 'annotate'
+
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.5'
 
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-rails', '~> 4.7.0.1'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
 	gem 'byebug', platform: :mri

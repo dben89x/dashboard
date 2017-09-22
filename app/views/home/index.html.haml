@@ -1,0 +1,22 @@
+-count = 1
+-@events_json.each do |event|
+	=event[:start_time].strftime('%b %d')
+	%h3
+		="#{event[:start_time].strftime('%l:%M %p')} - #{event[:end_time].strftime('%l:%M %p')}"
+	%h3
+		=link_to event[:name], event[:link]
+		%br
+		="#{event[:rsvp_count]} going"
+	%h4
+		=event[:group]
+	%br
+	%button{"data-toggle"=> 'collapse', "data-target"=>"description-#{count}"}
+		Description
+	%div{id: "description-#{count}"}
+		=event[:description].html_safe
+	%hr
+	%br
+	%br
+	-count += 1
+
+-# =@response
