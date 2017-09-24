@@ -10,11 +10,11 @@
 	%h4
 		=event[:group]
 	%br
-	%button.description{"data-toggle"=> 'collapse', "data-target"=>"#description-#{count}", "aria-expanded"=>"false", "aria-controls"=>"description-#{count}"}
+	%button.description-btn{"data-target"=>"#description-#{count}"}
 		Description
+		.fa.fa-chevron-down
 	.collapse.description{id: "description-#{count}"}
-		foo
-		-# =event[:description].html_safe
+		=event[:description].html_safe
 	%hr
 	%br
 	%br
