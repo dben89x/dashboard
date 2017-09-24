@@ -18,7 +18,7 @@ gem 'erb2haml'
 gem 'annotate'
 
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
+gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass', '~> 3.3.7'

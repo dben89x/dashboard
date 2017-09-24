@@ -4,19 +4,25 @@
 	%h3
 		="#{event[:start_time].strftime('%l:%M %p')} - #{event[:end_time].strftime('%l:%M %p')}"
 	%h3
-		=link_to event[:name], event[:link]
+		=link_to event[:name], event[:link], target: '_blank'
 		%br
 		="#{event[:rsvp_count]} going"
 	%h4
 		=event[:group]
 	%br
-	%button{"data-toggle"=> 'collapse', "data-target"=>"description-#{count}"}
+	%button.description{"data-toggle"=> 'collapse', "data-target"=>"#description-#{count}", "aria-expanded"=>"false", "aria-controls"=>"description-#{count}"}
 		Description
-	%div{id: "description-#{count}"}
-		=event[:description].html_safe
+	.collapse.description{id: "description-#{count}"}
+		foo
+		-# =event[:description].html_safe
 	%hr
 	%br
 	%br
 	-count += 1
+
+-# %button{"data-toggle"=> 'collapse', "data-target"=>"#foo", "aria-expanded"=>"false", "aria-controls"=>"foo"}
+-# 	Foo
+-# .collapse{id: "foo"}
+-# 	foo
 
 -# =@response
