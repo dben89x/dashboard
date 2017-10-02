@@ -24,3 +24,8 @@
 
 2. Ideas
 	- who needs a secretary when you have an automated dashboard?
+
+3. What I need to outsource
+	- someone who finds contracts for web development business (recruiter?)
+	- someone who manages finances and taxes (CPA?)
+	- someone who handles legal matters

@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml', '~> 4.0.7'
 gem 'erb2haml'
 gem 'annotate'
+gem 'figaro'
 
 gem 'jquery-rails'
 gem 'turbolinks'
