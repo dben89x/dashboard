@@ -10,6 +10,8 @@ deploy:
     prod: my-life-dashboard
   on:
     repo: dben89x/dashboard
+  run:
+    - "rake db:migrate"
   skip_cleanup: true
 notifications:
   email: false

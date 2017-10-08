@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
-  resources :blog_posts
+	resources :blog_posts
 	resources :contacts
 	resources :properties
 	resources :meetups
