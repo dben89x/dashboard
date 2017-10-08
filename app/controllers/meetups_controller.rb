@@ -3,10 +3,14 @@ class MeetupsController < ApplicationController
 		require 'net/http'
 		uri = URI("https://api.meetup.com/self/events")
 		key = ENV['meetup_key']
-		upcoming_params = {sign: true, key: key, page: 20, rsvp: "yes", status: "upcoming"}
-		past_params = {sign: true, key: key, page: 20, rsvp: "yes", status: "past"}
 
-		uri.query = URI.encode_www_form(past_params)
+		# Upcoming
+		params = {sign: true, key: key, page: 20, rsvp: "yes", status: "upcoming"}
+
+		# Past
+		# params = {sign: true, key: key, page: 20, rsvp: "yes", status: "past"}
+
+		uri.query = URI.encode_www_form(params)
 		@response = Net::HTTP.get_response(uri)
 		@events = JSON.parse(@response.body) if @response.is_a?(Net::HTTPSuccess)
 		@events_json = create_events_json(@events)

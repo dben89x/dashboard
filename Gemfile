@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-	repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-	"https://github.com/#{repo_name}.git"
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
 end
 
 
@@ -17,6 +17,7 @@ gem 'haml', '~> 4.0.7'
 gem 'erb2haml'
 gem 'annotate'
 gem 'figaro'
+gem 'react_on_rails', '~> 6.8.1'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -27,14 +28,14 @@ gem 'font-awesome-rails', '~> 4.7.0.1'
 gem 'twitter-bootstrap-rails'
 
 group :development, :test do
-	gem 'byebug', platform: :mri
+  gem 'byebug', platform: :mri
 end
 
 group :development do
-	gem 'web-console', '>= 3.3.0'
-	gem 'listen', '~> 3.0.5'
-	gem 'spring'
-	gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

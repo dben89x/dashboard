@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.3.0
+script: npm install -g yarn
+deploy:
+  provider: heroku
+  api_key:
+    secure: R9NGh4toyp0qkmyBSL36WlwRitiqJ6CvUbzfyjQvn1+6wZlV+821PHiGHYZY+ehSJg5tSxCpdS+4nYGVfXjrnnIlm2uHrGJZlWa9kvPvcBl6HOZWG1LKz5dLcFprPyiAH/c19156O0T3UyPkWXyKDBNqUsvWNs1OMu8IfvhDjry53Mk6IvEmFITUMgBP/xeusnTMw57aIQqmYQAQNqG9Yr7bdWmjF44cg4zHyCv3xmxga7TCWg46ju1wGTcZDTmrItWqqJSo7ZE6IgkEsJWPScIx5pyEoLScSFcy+4y23C7oAC5EXrGsLlFHNMANOYuAQMbFrEC7u5iOYhCe3AxntAhTWM0mTghOXe46dnbk/hNSaPlkgzyB1PGtJC/Xvv6GaWt3TV4AY5T5JvxStH5MvjTdnJ7UvEvZYxC/rkT6SsCZ/gDOzGHbbqqjfW67WY8CBSjBZqNxCsO57uZi5+NHPxOSKigpKOgzof9sLdZ7qdrByFnek6RqvpgKiSoDVHubaTpwWPt1h/sWgGX0msEtxM7NSAVGlGHDr4DH1eTkFY702/LS07xUaT4drgADRF7oy4WR3rLDQwQkw584RqzpPlRcfRJViRu8OQiNK4ckTv2LuiT38RTVz3bUqmdwtvDrjSOIZMFqx7LLVVolaABaflCCwi9XfJAmYGWXM/ECJ+o=
+  app:
+    prod: my-life-dashboard
+  on:
+    repo: dben89x/dashboard
+  skip_cleanup: true
+notifications:
+  email: false

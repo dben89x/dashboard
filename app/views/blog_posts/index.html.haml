@@ -1,0 +1,16 @@
+=@post.html_safe
+
+-# %p#notice= notice
+-# %h1 Blog Posts
+-# %table
+-#   %thead
+-#     %tr
+-#       %th{:colspan => "3"}
+-#   %tbody
+-#     - @blog_posts.each do |blog_post|
+-#       %tr
+-#         %td= link_to 'Show', blog_post
+-#         %td= link_to 'Edit', edit_blog_post_path(blog_post)
+-#         %td= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }
+-# %br/
+-# = link_to 'New Blog Post', new_blog_post_path
