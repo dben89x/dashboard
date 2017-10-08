@@ -12,7 +12,10 @@ class MeetupsController < ApplicationController
 
 		uri.query = URI.encode_www_form(params)
 		@response = Net::HTTP.get_response(uri)
+		puts "Response: #{@response.inspect}"
+		puts "Response body: #{@response.body.inspect}"
 		@events = JSON.parse(@response.body) if @response.is_a?(Net::HTTPSuccess)
+		puts "Events: #{@events}"
 		@events_json = create_events_json(@events)
 	end
 
