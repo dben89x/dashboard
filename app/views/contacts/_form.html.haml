@@ -1,0 +1,39 @@
+= form_for(contact) do |f|
+	- if contact.errors.any?
+		#error_explanation
+			%h2
+				= pluralize(contact.errors.count, "error")
+				prohibited this contact from being saved:
+			%ul
+				- contact.errors.full_messages.each do |message|
+					%li= message
+	.form-group
+		=f.label :first_name do
+			=f.text_field :first_name, class: "form-control", placeholder: "First Name"
+		=f.label :last_name do
+			=f.text_field :last_name, class: "form-control", placeholder: "Last Name"
+	.form-group
+		=f.label :email do
+			=f.text_field :email, class: "form-control", placeholder: "Email"
+		=f.label :phone do
+			=f.text_field :phone, class: "form-control", placeholder: "Phone"
+	.form-group
+		=f.label :project do
+			=f.text_field :project, class: "form-control", placeholder: "Project"
+		=f.label :business do
+			=f.text_field :business, class: "form-control", placeholder: "Business"
+	.form-group
+		=f.label :last_contacted do
+			Last Contacted
+			=f.date_field :last_contacted, class: "form-control", placeholder: "Last Contacted"
+		=f.label :date_met do
+			Date Met
+			=f.date_field :date_met, class: "form-control", placeholder: "Date Met"
+	.form-group
+		=f.label :where_met do
+			=f.text_field :where_met, class: "form-control", placeholder: "Where Met"
+	.form-group
+		=f.label :notes do
+			=f.text_area :notes, class: "form-control", placeholder: "Notes"
+	.actions
+		= f.submit class: 'btn btn-default'

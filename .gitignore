@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/posts
 ideas.md
 
 # Ignore Byebug command history file.

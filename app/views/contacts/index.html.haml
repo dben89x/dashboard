@@ -1,0 +1,18 @@
+%p#notice= notice
+%h1{style:'margin-left:5%'}
+	Contacts
+	= link_to 'New Contact', new_contact_path, class: 'btn btn-default'
+
+%hr
+.container
+	- @contacts.each do |contact|
+		= link_to contact.name, edit_contact_path(contact)
+		= link_to contact, method: :delete, data: { confirm: 'Are you sure?' } do
+			.fa.fa-times{style: 'margin-left:20px'}
+		%br
+		%b=contact.business
+		%br
+		=contact.last_contacted.strftime("%b %e")
+		=link_to "Update", update_last_contacted_path(id: contact.id), method: :post, style: "border:1px solid; padding:2px 6px; border-radius:6px; margin:3px;"
+		%hr
+	%br/
