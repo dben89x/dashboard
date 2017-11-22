@@ -67,6 +67,8 @@ class ContactsController < ApplicationController
 		end
 
 		def contact_params
-			params.fetch(:contact, {})
+			params.fetch(:contact, {}).permit(:first_name, :phone, :email, :project,
+				:business, :date_met, :last_contacted, :where_met, :last_name, :notes)
 		end
+
 end
